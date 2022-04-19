@@ -20,14 +20,6 @@ db_conn = connections.Connection(
 output = {}
 table = 'employee'
 
-@app.route("/templates.css")
-def styles():
-    return send_from_directory("templates", "AddEmpStyle.css")
-
-@app.route("/templates.css")
-def styles():
-    return send_from_directory("templates", "NavBarStyle.css")
-
 @app.route("/", methods=['GET', 'POST'])
 def home():
     return render_template('AddEmp.html')
